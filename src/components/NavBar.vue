@@ -16,9 +16,9 @@
       </RouterLink>
       <div class="menu">
         <div v-if="isAuthenticated">
-          <i v-show="isAuthenticated" class="px-2 py-4"
-            >Welcome back <strong>{{ user.name }}</strong></i
-          >
+          <p v-show="isAuthenticated" class="px-2 py-4">
+            Welcome back <strong>{{ user?.email }}</strong>
+          </p>
           <RouterLink :to="{ name: 'Settings' }" href="#" class="menu-item">Settings</RouterLink>
 
           <button class="menu-logout" @click="logout">Logout</button>
